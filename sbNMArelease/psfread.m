@@ -16,6 +16,7 @@ function [atomTypes, bonds, angles, phis, imps, charges]=psfread(filename, charm
 
 fid=fopen(filename,'r');
 A = fread(fid);
+fclose(fid);
 lines = splitlines(string(char(A')));
 atomLine = find(endsWith(lines, "!NATOM"));
 temp = split(strip(lines(atomLine)));

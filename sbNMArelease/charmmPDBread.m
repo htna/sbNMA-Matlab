@@ -19,7 +19,7 @@ A = fread(fid);
 fclose(fid);
 lines = splitlines(string(char(A')));
 lines = lines(find(startsWith(lines, "ATOM")),:); % key only ATOM rows
-lines = char(lines); % convert a matrix of chars
+lines = char(lines); % convert to a matrix of chars
 xyz = zeros(size(lines,1), 7);
 xyz(:,1:5) = [str2num(lines(:,7:11)), str2num(lines(:,23:26)), str2num(lines(:,31:38)), str2num(lines(:,39:46)), str2num(lines(:,47:54))];
 atomType = strip(string(lines(:,13:16)));

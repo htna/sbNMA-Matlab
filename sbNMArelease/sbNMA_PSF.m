@@ -4,8 +4,8 @@ function [hess, massMat] = sbNMA_PSF(xyz, bonds, angles, torsional, improper, at
 % date: 08/03/17
 % last update: 01/16/2018. set an upperbound for K_vdW to be 10.
 % xyz: coordinates of the protein
-% bonds: nb-by-4 matrix, each row of which has 2 ints that represent indices of 2 interacting atoms
-% angles: na-by-4 matrix, each row of which has 3 ints that represent indices of 3 interacting atoms
+% bonds: nb-by-2 matrix, each row of which has 2 ints that represent indices of 2 interacting atoms
+% angles: na-by-3 matrix, each row of which has 3 ints that represent indices of 3 interacting atoms
 % torsional: nt=by-4 matrix, each row of which has 4 ints that represent indices of 4 interacting atoms
 % improper: ni-by-4 matrix, each row of which has 4 ints that represent indices of 4 interacting atoms
 % atomTypes: a n-by-1 matrix where n is the number of atoms in this protein, representing the charmm atom type of each atom in this protein.  

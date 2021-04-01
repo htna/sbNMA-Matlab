@@ -21,7 +21,7 @@ To use sbNMA to compute Hessian matrix and normal modes, take the following step
 7. (optional) The following sequence of commands compute the mass-weighted Hessian matrix, solve for normal modes and the vibrational frequencies, and plot the vibrational frequency spectrum.  
 >> massSqrt = 1./sqrt(massMat(:));
 >> hessM = massSqrt*massSqrt'.*hess;
->> [Vm, Dm] = eig(hessM);
+>> [Vm, Dm] = eig(full(hessM));
 >> lambdas  = abs(diag(Dm)); % eigenvalues
 >> omegas = sqrt(lambdas)*108.52; % vibrational frequency, in cm-1.
 >> hist(omegas, 100);
